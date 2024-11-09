@@ -7,9 +7,9 @@ document.querySelector("form").addEventListener("submit", function(event) {
     const password = document.getElementById("password").value;
   
     // Validação do usuário e senha
-    if (username === "felipe" && password === "tigrinhosimuator123") {
+    if (username === "felipe" && password === "tigrinhosimulator123") {
       window.location.href = "ola_felipe.html";
-    } else if (username === "nicolas" && password === "2") {
+    } else if (username === "nicolas" && password === "jogodogatinho") {
       window.location.href = "ola_nicolas.html";
     } else {
       alert("Usuário ou senha incorretos!");
