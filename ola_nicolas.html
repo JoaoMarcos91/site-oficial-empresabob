@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <script>
+    // Verifica o token de autenticação
+    if (sessionStorage.getItem("authToken") !== "authenticated-nicolas") {
+      // Redireciona para a página de login se o token não for válido
+      window.location.href = "loginfuncionarios.html";
+    }
+    </script>
+    
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bem-vindo Nicolas</title>
