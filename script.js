@@ -18,6 +18,18 @@ document.querySelector("form").addEventListener("submit", function(event) {
     setCookie("authToken", "authenticated-victor", 10); // Cookie válido por 10 minutos
     console.log("Cookie definido:", document.cookie); // Verifica o cookie após ser criado
     window.location.href = "ola_victor.html";
+  } else if (username === "felipe" && password === "tigrinhosimulator123") {
+    setCookie("authToken", "authenticated-felipe", 10); // Cookie válido por 10 minutos
+    console.log("Cookie definido:", document.cookie); // Verifica o cookie após ser criado
+    window.location.href = "ola_felipe.html";
+  } else if (username === "nicolas" && password === "jogodogatinho") {
+    setCookie("authToken", "authenticated-nicolas", 10); // Cookie válido por 10 minutos
+    console.log("Cookie definido:", document.cookie); // Verifica o cookie após ser criado
+    window.location.href = "ola_nicolas.html";
+  } else if (username === "diego" && password === "brasil") {
+    setCookie("authToken", "authenticated-diego", 10); // Cookie válido por 10 minutos
+    console.log("Cookie definido:", document.cookie); // Verifica o cookie após ser criado
+    window.location.href = "ola_diego.html";
   } else {
     alert("Usuário ou senha incorretos!");
   }
