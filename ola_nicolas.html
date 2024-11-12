@@ -2,9 +2,15 @@
 <html lang="pt-BR">
 <head>
   <script>
-    // Verifica o token de autenticação
-    if (sessionStorage.getItem("authToken") !== "authenticated-nicolas") {
-      // Redireciona para a página de login se o token não for válido
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    
+    // Verifica o cookie de autenticação
+    if (getCookie("authToken") !== "authenticated-nicolas") {
+      // Redireciona para a página de login se o cookie não for válido
       window.location.href = "loginfuncionarios.html";
     }
     </script>
@@ -15,5 +21,6 @@
 </head>
 <body>
   <h1>Olá Nicolas!</h1>
+  <p>Sem trabalho por enquanto</p>
 </body>
 </html>
