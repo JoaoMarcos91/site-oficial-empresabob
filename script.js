@@ -12,7 +12,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
-  if (username === "victor" && password === "aposta") {
+  if (username === "victor" && password === "oioi") {
     setCookie("authToken", "authenticated-victor", 10);
     window.location.href = "ola_victor.html";
   } else {
