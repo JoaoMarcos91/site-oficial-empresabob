@@ -21,7 +21,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
     window.location.href = "ola_nicolas.html";
   } else if (username === "victor" && password === "1234") {
     setCookie("authToken", "authenticated-victor", 10); // Cookie válido por 10 minutos
-    window.location.href = "ola_vicotr.html";  
+    window.location.href = "ola_victor.html";  
   } else if (username === "diego" && password === "amigos") {
     setCookie("authToken", "authenticated-diego", 10); // Cookie válido por 10 minutos
     window.location.href = "ola_diego.html";      
