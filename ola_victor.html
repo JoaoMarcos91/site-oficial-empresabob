@@ -11,14 +11,16 @@
       if (parts.length === 2) return parts.pop().split(';').shift();
     }
     
-    // Verifica o cookie de autenticação
-    if (getCookie("authToken") !== "authenticated-victor") {
-      // Redireciona para a página de login se o cookie não for válido
+    const authCookie = getCookie("authToken");
+    console.log("Valor do cookie de autenticação:", authCookie); // Verifica o valor do cookie
+    
+    // Verifica se o cookie está presente
+    if (authCookie !== "authenticated-victor") {
       window.location.href = "loginfuncionarios.html";
-    } else {
-      console.log("Usuário autenticado: Victor");
     }
   </script>
+  
+
 </head>
 <body>
   <h1>Olá Victor!</h1>

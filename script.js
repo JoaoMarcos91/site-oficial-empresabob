@@ -11,14 +11,11 @@ document.querySelector("form").addEventListener("submit", function(event) {
   
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
-  
-  // Validação do usuário e senha
-  if (username === "felipe" && password === "tigrinhosimulator123") {
-    setCookie("authToken", "authenticated-felipe", 10); // Cookie válido por 10 minutos
-    window.location.href = "ola_felipe.html";
-  } else if (username === "nicolas" && password === "jogodogatinho") {
-    setCookie("authToken", "authenticated-nicolas", 10); // Cookie válido por 10 minutos
-    window.location.href = "ola_nicolas.html";
+
+  if (username === "victor" && password === "oioi") {
+    setCookie("authToken", "authenticated-victor", 10); // Cookie válido por 10 minutos
+    console.log("Cookie definido:", document.cookie); // Verifica o cookie após ser criado
+    window.location.href = "ola_victor.html";
   } else {
     alert("Usuário ou senha incorretos!");
   }
