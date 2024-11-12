@@ -19,7 +19,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
   } else if (username === "nicolas" && password === "jogodogatinho") {
     setCookie("authToken", "authenticated-nicolas", 10); // Cookie válido por 10 minutos
     window.location.href = "ola_nicolas.html";
-  } else if (username === "victor" && password === "1234") {
+  } else if (username === "victor" && password === "carton") {
     setCookie("authToken", "authenticated-victor", 10); // Cookie válido por 10 minutos
     window.location.href = "ola_victor.html";  
   } else if (username === "diego" && password === "amigos") {
