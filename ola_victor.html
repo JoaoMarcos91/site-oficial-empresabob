@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem-vindo Victor</title>
   <script>
     function getCookie(name) {
       const value = `; ${document.cookie}`;
@@ -12,12 +15,10 @@
     if (getCookie("authToken") !== "authenticated-victor") {
       // Redireciona para a página de login se o cookie não for válido
       window.location.href = "loginfuncionarios.html";
+    } else {
+      console.log("Usuário autenticado: Victor");
     }
-    </script>
-    
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bem-vindo Victor</title>
+  </script>
 </head>
 <body>
   <h1>Olá Victor!</h1>
