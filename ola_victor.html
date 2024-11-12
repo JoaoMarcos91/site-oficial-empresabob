@@ -10,15 +10,13 @@
       const parts = value.split(`; ${name}=`);
       if (parts.length === 2) return parts.pop().split(';').shift();
     }
-    
-    const authCookie = getCookie("authToken");
-    console.log("Valor do cookie de autenticação:", authCookie); // Verifica o valor do cookie
-    
-    // Verifica se o cookie está presente
-    if (authCookie !== "authenticated-victor") {
+  
+    console.log("Cookie na ola_victor.html:", document.cookie); // Verifica se o cookie está presente na página
+    if (getCookie("authToken") !== "authenticated-victor") {
       window.location.href = "loginfuncionarios.html";
     }
   </script>
+  
   
 
 </head>

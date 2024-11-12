@@ -4,7 +4,9 @@ function setCookie(name, value, minutes) {
   const date = new Date();
   date.setTime(date.getTime() + (minutes * 60 * 1000));
   document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+  console.log("Cookie após set:", document.cookie); // Verifica se o cookie foi armazenado
 }
+
 
 document.querySelector("form").addEventListener("submit", function(event) {
   event.preventDefault(); // Previne o envio do formulário
