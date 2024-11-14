@@ -17,7 +17,7 @@ function handleLogin(username, password) {
 
   const user = userCredentials[username];
   if (user && user.password === password) {
-    setCookie("authToken", user.cookieValue, 10); // Define o cookie com 30 segundos de validade
+    setCookie("authToken", user.cookieValue, 5); // Define o cookie com 30 segundos de validade
     console.log("Cookie definido:", document.cookie); // Verifica o cookie após ser criado
     window.location.href = user.redirectUrl; // Redireciona para a página do usuário
   } else {
