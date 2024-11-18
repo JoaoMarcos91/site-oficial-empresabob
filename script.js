@@ -32,3 +32,31 @@ document.querySelector("form").addEventListener("submit", function(event) {
   const password = document.getElementById("password").value;
   handleLogin(username, password); // Chama a função de verificação de login
 });
+
+
+document.getElementById("toggleBtn").addEventListener("click", function () {
+  const input = document.getElementById("password");
+  if (input.type === "password") {
+    input.type = "text"; // Muda para texto
+    this.textContent = "Ocultar Senha"; // Atualiza o botão
+  } else {
+    input.type = "password"; // Volta para senha
+    this.textContent = "Mostrar Senha";
+  }
+});
+
+// document.getElementById("toggleBtn").addEventListener("click", function () {
+//   const passwordInput = document.getElementById("password");
+//   const eyeOpen = document.getElementById("eyeOpen");
+//   const eyeClosed = document.getElementById("eyeClosed");
+
+//   if (passwordInput.type === "password") {
+//     passwordInput.type = "text";
+//     eyeOpen.style.display = "none";
+//     eyeClosed.style.display = "block";
+//   } else {
+//     passwordInput.type = "password";
+//     eyeOpen.style.display = "block";
+//     eyeClosed.style.display = "none";
+//   }
+// });
