@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <script>
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    
+    // Verifica o cookie de autenticação
+    if (getCookie("authToken") !== "authenticated-joaopedro") {
+      // Redireciona para a página de login se o cookie não for válido
+      window.location.href = "loginfuncionarios.html";
+    }
+    </script>
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+        font-family: sans-serif;
+    }
+  </style>
+  <title>Bem-vindo Felipe</title>
+</head>
+<body>
+  <h1>Olá Felipe!</h1>
+  <p>O seu trabalho é parar de ficar vindo aqui à cada 5 minutos pra ver se vc tem algum trabalho</p>
+</body>
+</html>
