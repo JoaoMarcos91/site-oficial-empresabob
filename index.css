@@ -1,0 +1,136 @@
+* {
+    color: white;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 5px;
+}
+
+
+html {
+    background-color: black;
+    overflow: hidden;
+}
+
+header, main, footer {
+    position: relative;
+    z-index: 10;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+    flex-direction: column;
+    z-index: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    box-sizing: border-box;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 50px;
+    margin: 10px;
+    outline: none;
+    padding-inline: 15px;
+    padding-block: 10px;
+    width: 20vw;
+    min-width: 100px;
+    transition: all .3s;
+}
+
+button {
+    all: unset;
+    color: black;
+    box-sizing: border-box;
+    border-radius: 50px;
+    width: 20vw;
+    min-width: 100px;
+    padding-inline: 15px;
+    padding-block: 10px;
+    text-align: center;
+    box-shadow: none;
+    background: linear-gradient(to right, pink, yellow);
+    transition: all .3s;
+}
+
+
+
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.73);
+}
+
+a {
+    font-size: 10px;
+    text-decoration: none;
+    transition: all .3s;
+    margin-inline: 4vw;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.div1,
+.div2,
+.div3 {
+    padding: 30px;
+    position: absolute; /* Permite sobreposição */
+    width: 350px; /* Ocupa o espaço total de 'main' */
+    height: 350px; /* Ocupa o espaço total de 'main' */
+}
+
+.div1 {
+    border: 4px solid #ff6200;
+    z-index: 4; /* Div1 no topo */
+    border-radius: 170px 130px 45%;
+    animation: spin 5s linear infinite;
+}
+
+.div2 {
+    border: 4px solid #00ff00;
+    z-index: 3; /* Div2 no meio */
+    border-radius: 120px 120px 70% 70%;
+    animation: spin 8s linear infinite;
+}
+
+.div3 {
+    border: 4px solid #ffea00;
+    z-index: 2; /* Div3 na base */
+    border-radius: 130px 190px 140px 100px;
+    animation: spininverse 10s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg); /* Começa sem rotação */
+    }
+    to {
+        transform: rotate(360deg); /* Gira até 360 graus */
+    }
+}
+
+@keyframes spininverse {
+    from {
+        transform: rotate(0deg); /* Começa sem rotação */
+    }
+    to {
+        transform: rotate(-360deg); /* Gira até 360 graus */
+    }
+}
