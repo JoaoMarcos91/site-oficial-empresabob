@@ -1,3 +1,4 @@
+/* Estilização base */
 * {
     color: white;
     font-family: sans-serif;
@@ -5,11 +6,19 @@
     margin: 5px;
 }
 
+:root {
+    --tamanho-h1: 4vw;
+}
 
 html {
     background-color: black;
     overflow: hidden;
 }
+
+h1 {
+    font-size: clamp(1.5rem, var(--tamanho-h1), 3rem);
+}
+
 
 form {
     display: flex;
@@ -21,7 +30,6 @@ header, main, footer {
     position: relative;
     z-index: 10;
 }
-
 
 body {
     display: flex;
@@ -59,7 +67,7 @@ button {
     box-sizing: border-box;
     border-radius: 50px;
     width: 20vw;
-    min-width: 100px;
+    min-width: 200px;
     padding-inline: 15px;
     padding-block: 10px;
     text-align: center;
@@ -71,8 +79,6 @@ button {
 button:hover {
     cursor: pointer;
 }
-
-
 
 input::placeholder {
     color: rgba(255, 255, 255, 0.73);
@@ -101,8 +107,10 @@ footer {
 .div3 {
     padding: 30px;
     position: absolute; /* Permite sobreposição */
-    width: 350px; /* Ocupa o espaço total de 'main' */
-    height: 350px; /* Ocupa o espaço total de 'main' */
+    width: 33vw; /* Ocupa o espaço total de 'main' */
+    height: 33vw; /* Ocupa o espaço total de 'main' */
+    min-width: 300px;
+    min-height: 300px;
 }
 
 .div1 {
@@ -141,5 +149,44 @@ footer {
     }
     to {
         transform: rotate(-360deg); /* Gira até 360 graus */
+    }
+}
+
+/* Estilização para dispositivos menores (celulares) */
+@media (max-width: 768px) {
+    input {
+        min-width: 200px; /* Ajusta para o tamanho da tela */
+        
+    }
+
+    button {
+        min-width: 200; /* Ajusta para o tamanho da tela */
+    }
+
+    a {
+        font-size: 13px; /* Texto mais legível em telas pequenas */
+        margin-inline: 2vw;
+    }
+}
+
+/* Estilização para dispositivos maiores (computadores) */
+@media (min-width: 769px) {
+    input {
+        width: 20vw; /* Mantém o tamanho padrão */
+    }
+
+    .div1,
+    .div2,
+    .div3 {
+        min-width: 400px;
+        min-height: 400px;
+    }
+
+    button {
+        width: 20vw; /* Mantém o tamanho padrão */
+    }
+
+    a {
+        font-size: 15px; /* Fonte menor para desktops */
     }
 }
