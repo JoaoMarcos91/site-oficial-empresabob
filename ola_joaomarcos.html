@@ -8,4 +8,17 @@
 <body>
     <h1>Você é o <strong>MELHOR</strong>!!! Melhor do que todos os outros!!</h1>
 </body>
+<script>
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    
+    // Verifica o cookie de autenticação
+    if (getCookie("authToken") !== "authenticated-joaomarcos") {
+      // Redireciona para a página de login se o cookie não for válido
+      window.location.href = "loginfuncionarios.html";
+    }
+</script>
 </html>
